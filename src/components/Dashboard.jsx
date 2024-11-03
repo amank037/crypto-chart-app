@@ -19,7 +19,7 @@ const Dashboard = () => {
 
   const fetchCryptoData = async () => {
     try {
-      const response = await axios.get('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,litecoin&vs_currencies=usd');
+      const response = await axios.get('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,litecoin,cardano,ripple,polkadot,dogecoin,chainlink&vs_currencies=usd');
       setCryptoData(response.data);
     } catch (err) {
       setError('Error fetching crypto data: ' + err.message);
