@@ -34,13 +34,16 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="p-4">
+    <div className="flex flex-col items-center p-4">
       <h1 className="text-2xl font-bold mb-4">Crypto Prices</h1>
-      <CryptoChart data={chartData} />
+      <div className="w-full max-w-2xl"> {/* Centering the chart container */}
+        <CryptoChart data={chartData} />
+      </div>
     </div>
   );
 };
 
 export default Dashboard;
+
 
 
